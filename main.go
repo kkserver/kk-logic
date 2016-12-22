@@ -183,6 +183,47 @@ func main() {
 
 					}
 				}
+			} else if strings.HasSuffix(r.URL.Path, "/") {
+
+				path := "./web" + r.URL.Path + "index.yaml"
+
+				p, err := getProgram(path)
+
+				if err != nil {
+					fs.ServeHTTP(w, r)
+				} else {
+					ctx := getContext(w, r)
+					ctx.Begin()
+					defer ctx.End()
+					defer ctx.Close()
+					err = logic.Exec(&a, p, ctx)
+					if err != nil {
+						w.WriteHeader(http.StatusInternalServerError)
+						w.Write([]byte(err.Error()))
+					} else {
+
+						view := ctx.Get(logic.ViewKeys)
+
+						if view == nil {
+							w.WriteHeader(http.StatusNotFound)
+							w.Write([]byte("Not Found"))
+						} else {
+							v, ok := view.(*logic.View)
+							if ok {
+
+								if v.ContentType == "" {
+									v.ContentType = "text/html; charset=utf-8"
+								}
+								w.Header().Add("Content-Type", v.ContentType)
+								w.Write(v.Content)
+							} else {
+								w.WriteHeader(http.StatusNotFound)
+								w.Write([]byte("Not Found"))
+							}
+						}
+
+					}
+				}
 
 			} else {
 				fs.ServeHTTP(w, r)

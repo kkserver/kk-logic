@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="left-open-big" unicode="&#xe800;" d="M452-20q26-26 0-48-26-26-48 0l-392 394q-24 24 0 50l392 394q22 26 48 0 26-22 0-48l-358-372z" horiz-adv-x="465" />
+
+<glyph glyph-name="right-open-big" unicode="&#xe801;" d="M13-20l358 370-358 372q-26 26 0 48 26 26 48 0l392-394q24-26 0-50l-392-394q-22-26-48 0-26 22 0 48z" horiz-adv-x="465" />
+
+<glyph glyph-name="arrows-ccw" unicode="&#xe802;" d="M186 140l116 116 0-292-276 16 88 86q-116 122-114 290t120 288q100 100 240 116l4-102q-100-16-172-88-88-88-90-213t84-217z m332 598l276-16-88-86q116-122 114-290t-120-288q-96-98-240-118l-2 104q98 16 170 88 88 88 90 213t-84 217l-114-116z" horiz-adv-x="820" />
+
+<glyph glyph-name="plus" unicode="&#xe803;" d="M550 400q30 0 30-50t-30-50l-210 0 0-210q0-30-50-30t-50 30l0 210-210 0q-30 0-30 50t30 50l210 0 0 210q0 30 50 30t50-30l0-210 210 0z" horiz-adv-x="580" />
+
+<glyph glyph-name="spinner" unicode="&#xf110;" d="M294 72q0-29-21-50t-51-21q-29 0-50 21t-21 50q0 30 21 51t50 21 51-21 21-51z m277-115q0-29-20-50t-51-21-50 21-21 50 21 51 50 21 51-21 20-51z m-392 393q0-30-21-50t-51-21-50 21-21 50 21 51 50 20 51-20 21-51z m670-278q0-29-21-50t-50-21q-30 0-51 21t-20 50 20 51 51 21 50-21 21-51z m-538 556q0-37-26-63t-63-26-63 26-26 63 26 63 63 26 63-26 26-63z m653-278q0-30-21-50t-50-21-51 21-21 50 21 51 51 20 50-20 21-51z m-357 393q0-45-31-76t-76-31-76 31-31 76 31 76 76 31 76-31 31-76z m296-115q0-52-37-88t-88-37q-52 0-88 37t-37 88q0 51 37 88t88 37q51 0 88-37t37-88z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

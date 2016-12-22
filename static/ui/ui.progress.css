@@ -1,0 +1,15 @@
+
+.ui-progress {
+	height: 8px;
+	overflow: hidden;
+	position: relative;
+	border: solid 1px #28afec;
+}
+
+.ui-progress span {
+	position: absolute;
+	display: inline-block;
+	height: 100%;
+	width: 0px;
+	background-color: #28afec;
+}

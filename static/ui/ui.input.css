@@ -1,0 +1,28 @@
+
+.ui-input {
+	border: solid 1px #e5e5e5;
+	padding: 7px;
+	font-size: 14px;
+	color: #333;
+	vertical-align: middle;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right center;
+	outline: none;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+.ui-input:hover{
+	border:1px solid #28afec;
+}
+
+.ui-input:focus {
+	box-shadow: 0px 0px 5px #f4f4f4;
+	border: solid 1px #28afec;
+}
+
+.ui-input:disabled {
+	background-color: #f4f4f4;
+}
+

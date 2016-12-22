@@ -1,0 +1,12 @@
+	
+	<div>
+		<label>{{items.0.title}}:{{items.0.value}}</label>
+		<input type="text" kk-key="items.1.value" />
+		<ul>
+			<li kk-each="items" class="kk-view">
+				<label>{{title}}</label>
+				<input type="text" kk-key="value,kk.view.hidden,1" />
+			</li>
+		</ul>
+	</div>
+

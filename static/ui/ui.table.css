@@ -1,0 +1,35 @@
+
+table.ui-table {
+	table-layout: fixed;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+table.ui-table > thead td {
+	padding: 6px;
+	text-align: center;
+	background-color: #f4f4f4;
+	border: solid 1px #e5e5e5;
+	color: #666;
+}
+
+table.ui-table > tbody td {
+	padding: 6px;
+	text-align: left;
+	border: solid 1px #e5e5e5;
+	color: #333;
+}
+
+table.ui-table > tbody th {
+	padding: 6px;
+	text-align: right;
+	background-color: #f4f4f4;
+	border: solid 1px #e5e5e5;
+	color: #666;
+}
+
+table.ui-table > tfoot td {
+	text-align: right;
+	padding: 6px;
+}

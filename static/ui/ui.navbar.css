@@ -1,0 +1,63 @@
+
+.ui-navbar {
+	height: 49px;
+	background-color: #f6f6f6;
+	border-bottom: solid 1px #e5e5e5;
+	position: relative;
+}
+
+.ui-navbar .ui-titlebar {
+	position: absolute;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	color: #333;
+	font-size: 20px;
+	height: 49px;
+	line-height: 49px;
+}
+
+.ui-navbar .ui-leftbar {
+	position: absolute;
+	vertical-align: middle;
+	color: #333;
+	height: 49px;
+	line-height: 49px;
+	padding-left: 6px;
+	font-size: 20px;
+}
+
+.ui-navbar .ui-rightbar {
+	position: absolute;
+	vertical-align: middle;
+	color: #333;
+	height: 49px;
+	line-height: 49px;
+	left: auto;
+	right: 0px;
+	padding-right: 6px;
+	font-size: 20px;
+}
+
+.ui-navbar .ui-a {
+	color: #28afec;
+	font-size: 18px;
+	line-height: 49px;
+	height: 49px;
+	padding: 0px 6px;
+	display: inline-block;
+}
+
+.ui-navbar .ui-a:hover {
+	color: #1B90C5;
+}
+
+.ui-navbar .ui-a span {
+	vertical-align: middle;
+}
+
+.ui-navbar .ui-return .ui-icon {
+	margin-right: -12px;
+	margin-left: -16px;
+	font-size: 26px;
+}

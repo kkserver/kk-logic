@@ -1,0 +1,56 @@
+
+.ui-popover {
+	position: absolute;
+	box-shadow: 0 1px 8px rgba(0,0,0,.12);
+	border: solid 1px #e5e5e5;
+	margin: 0px;
+    background-color: #fff;
+    list-style: none;
+    padding: 0px;
+    z-index: 200;
+    display: none;
+}
+
+.ui-popover::before, .ui-popover::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    top: -7px;
+    background: none;
+    left: 50%;
+    margin-left: -4px;
+}
+
+.ui-popover::before {
+    top: -8px;
+    border-bottom-color: #e5e5e5;
+    z-index: 10;
+}
+
+.ui-popover::after {
+    z-index: 11;
+}
+
+.ui-popover-rb {
+	right: 0px;
+}
+
+.ui-popover-rb::before, .ui-popover-rb::after {
+	left: auto;
+	right: 12px;
+	margin-left: 0px;
+}
+
+.ui-popover-lb {
+	left: 0px;
+}
+
+.ui-popover-lb::before, .ui-popover-lb::after {
+	left: 12px;
+	margin-left: 0px;
+}
+

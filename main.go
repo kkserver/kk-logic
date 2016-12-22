@@ -76,6 +76,8 @@ func main() {
 
 			ctx := logic.NewLuaContext()
 
+			ctx.Begin()
+
 			input := map[string]interface{}{}
 
 			if r.Method == "POST" {
@@ -173,7 +175,6 @@ func main() {
 					w.Write([]byte(err.Error()))
 				} else {
 					ctx := getContext(w, r)
-					ctx.Begin()
 					defer ctx.End()
 					defer ctx.Close()
 					err = logic.Exec(&a, p, ctx)
@@ -201,7 +202,6 @@ func main() {
 					w.Write([]byte(err.Error()))
 				} else {
 					ctx := getContext(w, r)
-					ctx.Begin()
 					defer ctx.End()
 					defer ctx.Close()
 					err = logic.Exec(&a, p, ctx)

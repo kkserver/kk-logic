@@ -2,6 +2,8 @@
 In:
   logic: Request
   Name: kk.uuid.
+  Options: 
+    _: =input
   Timeout: 1
   Done: 
     logic: Output

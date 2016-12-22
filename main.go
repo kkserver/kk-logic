@@ -107,10 +107,13 @@ func main() {
 		}
 
 		fs := http.FileServer(http.Dir("./web"))
+		static_fs := http.FileServer(http.Dir("."))
 
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-			if strings.HasSuffix(r.URL.Path, ".json") {
+			if strings.HasPrefix(r.URL.Path, "/static/") {
+				static_fs.ServeHTTP(w, r)
+			} else if strings.HasSuffix(r.URL.Path, ".json") {
 
 				path := "./web" + r.URL.Path[0:len(r.URL.Path)-5] + ".yaml"
 

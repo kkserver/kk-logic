@@ -14,6 +14,8 @@ COPY ./lib/lua /lib/lua
 
 COPY ./web /web
 
+COPY ./static /static
+
 COPY ./view /view
 
 ENV LUA_PATH /lib/lua/?.lua;;

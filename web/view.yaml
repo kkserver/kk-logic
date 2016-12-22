@@ -1,0 +1,8 @@
+
+In: 
+  logic: Request
+  Name: kk.uuid.
+  Done: 
+    logic: View
+    Path: ./view/view.html
+    ContentType: text/html; charset=utf-8

@@ -1,0 +1,9 @@
+
+In:
+  logic: Request
+  Name: kk.uuid.
+  Timeout: 1
+  Done: 
+    logic: Output
+    Keys: uuid
+    Value: ?lua get("result")

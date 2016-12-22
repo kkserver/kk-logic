@@ -24,5 +24,7 @@ ENV KK_ENV_CONFIG /config/env.ini
 
 VOLUME /config
 
+EXPOSE 80
+
 CMD kk-logic $KK_ENV_CONFIG
 

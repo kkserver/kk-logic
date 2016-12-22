@@ -9,7 +9,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
+	"time"
 )
 
 type MainApp struct {
@@ -100,6 +102,53 @@ func main() {
 
 			}
 
+			var code = ""
+
+			{
+				var ip = r.Header.Get("X-CLIENT-IP")
+
+				if ip == "" {
+					ip = r.Header.Get("X-Real-IP")
+				}
+
+				if ip == "" {
+					ip = r.RemoteAddr
+				}
+
+				var cookie, err = r.Cookie("kk")
+
+				if err != nil {
+					var v = http.Cookie{}
+					v.Name = "kk"
+					v.Value = strconv.FormatInt(time.Now().UnixNano(), 10)
+					v.Expires = time.Now().Add(24 * 3600 * time.Second)
+					v.HttpOnly = true
+					v.MaxAge = 24 * 3600
+					v.Path = "/"
+					http.SetCookie(w, &v)
+					cookie = &v
+				}
+
+				code = cookie.Value
+
+				var b, _ = json.Encode(map[string]string{"code": code, "ip": ip,
+					"User-Agent": r.Header.Get("User-Agent"),
+					"Referer":    r.Header.Get("Referer"),
+					"Path":       r.RequestURI,
+					"Host":       r.Host,
+					"Protocol":   r.Proto})
+
+				var m = kk.Message{"MESSAGE", "", "kk.message.http.request", "text/json", b}
+
+				kk.GetDispatchMain().Async(func() {
+					task := client.ClientSendMessageTask{}
+					task.Message = m
+					app.Handle(&a, &task)
+				})
+
+			}
+
+			ctx.Set([]string{"code"}, code)
 			ctx.Set([]string{"method"}, r.Method)
 			ctx.Set(logic.InputKeys, input)
 

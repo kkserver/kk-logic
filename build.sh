@@ -42,13 +42,13 @@ buildProject() {
 	runCommand
 
 	CMD="docker push $PROJECT:$TAG"
-	runCommand
+	#runCommand
 
 	CMD="docker tag $PROJECT:$TAG $PROJECT:latest"
 	runCommand
 
 	CMD="docker push $PROJECT:latest"
-	runCommand
+	#runCommand
 
 }
 
@@ -56,7 +56,7 @@ echo $PWD
 
 #go
 
-PROJECT="registry.cn-hangzhou.aliyuncs.com/kk/kk-logic"
+PROJECT="registry.cn-beijing.aliyuncs.com/kk/kk-logic"
 buildProject
 
 #exit

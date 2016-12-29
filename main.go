@@ -162,7 +162,10 @@ func main() {
 
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-			if strings.HasPrefix(r.URL.Path, "/static/") {
+			if strings.HasSuffix(r.URL.Path, ".yaml") {
+				w.WriteHeader(http.StatusNotFound)
+				w.Write([]byte("Not Found"))
+			} else if strings.HasPrefix(r.URL.Path, "/static/") {
 				static_fs.ServeHTTP(w, r)
 			} else if strings.HasSuffix(r.URL.Path, ".json") {
 
